@@ -1,0 +1,38 @@
+<%- include("partials/header") -%>
+
+<main>
+    <div>
+        <h3>Apps</h3>
+        <ul>
+            <% for (var [name, route] of Object.entries(routes.apps)) { %>
+                <li><a href="<%= route %>"><%= name %></a></li>
+            <% } %>
+        </ul>
+    </div>
+    <div>
+        <h3>Routes</h3>
+        <table>
+            <tr>
+                <td>methods</td>
+                <td>path</td>
+                <td></td>
+            </tr>
+            <% for(const [mpath, r] of Object.entries(routes.routes)){ %>
+                <% for (const route of r) { %>
+                    <tr>
+                        <td>
+                            <% for (var [name, v] of Object.entries(route.methods)) { %>
+                                <%= `${name}`%>
+                            <% } %>
+                        </td>
+                        <td><%= path.join(mpath, route.path) %></td>
+                        <td><a href="<%= path.join(mpath, route.path) %>">Go</a></td>
+                    </tr>
+                <% } -%>
+            <% } %>
+        </table>
+    </div>
+
+</main>
+
+<%- include("partials/footer") -%>

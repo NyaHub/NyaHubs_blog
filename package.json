@@ -1,0 +1,37 @@
+{
+  "name": "web-rtc_mesh_chat",
+  "version": "0.1.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "serve": "nodemon --ignore public -e js,json,scss --watch app.js --watch . --watch ./public/stylesheets",
+    "prod": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.kawaiiusagi.ml/NyaHub/web-rtc_mesh_chat.git"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "http-errors": "^2.0.0",
+    "md5": "^2.3.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "sass": "^1.57.1",
+    "sequelize": "^6.28.0",
+    "sharp": "^0.31.3",
+    "sqlite3": "^5.1.4",
+    "tslib": "^2.4.1",
+    "winston": "^3.8.2"
+  },
+  "author": "NyaHub",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
