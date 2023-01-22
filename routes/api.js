@@ -16,10 +16,6 @@ module.exports = (app) => {
         next();
     });
 
-    router.get("/", (req, res, next) => {
-        res.render("index", res.locals.data);
-    });
-
     //-------------------------------------------------------file API--------------------------------------------------------
 
     let FileC = _require("@/controllers/FileController");

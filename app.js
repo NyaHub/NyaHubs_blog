@@ -27,7 +27,7 @@ async function  createExpressApp() {
 	app.use(express.json());
 	app.use(express.urlencoded({extended: false}));
 	app.use(_require('cookie-parser')());
-	app.use(_require('@/libs/dart-sass-middleware')("/public/stylesheets"));
+	app.use(_require('@/libs/dart-sass-middleware')("/public/"));
 	app.use(express.static(path.join(__dirname, 'public')));
 	
 	app.use(_require("@/libs/prepare")());

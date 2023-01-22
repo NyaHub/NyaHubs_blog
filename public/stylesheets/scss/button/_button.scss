@@ -1,0 +1,24 @@
+.button{
+    --bg-color: #cacaca;
+    --bg-color-hover: #8c8c8c;
+    --font-size: 1rem;
+    display: block;
+    border: 1px solid var(--bg-color);
+    border-radius: 10%;
+    background-color: var(--bg-color);
+    padding: calc(var(--font-size) * .3) calc(var(--font-size) * .6);
+    margin: 2px;
+    transition: .5s;
+    font-size: var(--font-size);
+    font-family: "Roboto mono";
+    
+    a, a:visited{
+        text-decoration: none;
+        color: black;
+    }
+    
+    &:has(a:hover){
+        background-color: var(--bg-color-hover);
+        font-size: calc(var(--font-size) * 1.2);
+    }
+}

@@ -1,10 +1,24 @@
 <%- include("partials/header") -%>
-<main>
-    <nav>
-        <li>Name: <span style="background-color: aquamarine"><%= user.name %></span></li>
-        <li>Email: <span style="background-color: aquamarine"><%= user.email %></span></li>
-        <li>RegistrationDate: <span style="background-color: aquamarine"><%= user.registrationDate %></span></li>
-        <li>LastIn: <span style="background-color: aquamarine"><%= user.lastIn %></span></li>
-    </nav>
-</main>
-<%- include("partials/footer") -%>
+    <main class="content">
+        <div class="content__user user-info">
+            <div class="user-info__avatar"><i class="fa fa-user" aria-hidden="true"></i></div>
+            <div class="user-info__info">
+                <li>Name: <span>
+                        <%= user.name %>
+                    </span></li>
+                <li>Email: <span>
+                        <%= user.email %>
+                    </span></li>
+                <li>RegistrationDate: <span>
+                        <%= user.registrationDate %>
+                    </span></li>
+                <li>LastIn: <span>
+                        <%= user.lastIn %>
+                    </span></li>
+            </div>
+        </div>
+        <div class="content__main">
+            
+        </div>
+    </main>
+    <%- include("partials/footer") -%>
